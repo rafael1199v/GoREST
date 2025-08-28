@@ -3,7 +3,6 @@ Feature: Listar comentarios
   Background:
     * def data = callonce read("classpath:helpers/create-comment.feature")
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token

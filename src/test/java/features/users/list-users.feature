@@ -6,7 +6,6 @@ Feature: Listar usuarios
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token
-    * def req_headers = {Authorization: Token}
 
   @ListResources @Regression
   Scenario: Listar los usuarios de manera exitosa

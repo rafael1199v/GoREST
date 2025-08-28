@@ -4,10 +4,7 @@ Feature: Actualizar una tarea
   Background:
     * def data = callonce read("classpath:helpers/create-todo.feature")
     * def todo = data.response
-
     * def statusList = ["completed", "pending"]
-    * def timeList = ["2026-04-06T01:26:11.000+05:30", "2026-04-06T02:26:11.000+05:30"]
-
     * def getBearerToken = read('classpath:utils/authorize.js')
     * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl

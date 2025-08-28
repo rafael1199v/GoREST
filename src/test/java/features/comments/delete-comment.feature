@@ -4,7 +4,6 @@ Feature: Eliminar un comentario
   Background:
     * def data = call read("classpath:helpers/create-comment.feature")
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token

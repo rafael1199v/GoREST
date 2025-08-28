@@ -8,7 +8,6 @@ Feature: Actualizar un usuario
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token
-    * def req_headers = {Authorization: Token}
 
   Scenario: Actualizar un usuario correctamente
     * def userId = data.response.id

@@ -5,7 +5,6 @@ Feature: Eliminar una tarea
     * def data = callonce read("classpath:helpers/create-todo.feature")
     * def todo = data.response
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token

@@ -4,12 +4,10 @@ Feature: Crear un post
   Background:
     * def data = callonce read("classpath:helpers/create-user.feature")
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataUserGenerator = read('classpath:utils/random-user-data-generator.js')
     * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token
-    * def req_headers = {Authorization: Token}
 
   Scenario: Crear post exitosamente
     * def userId = data.response.id

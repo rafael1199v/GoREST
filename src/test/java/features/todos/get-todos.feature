@@ -2,10 +2,7 @@ Feature: Listar tareas
 
   Background:
     * def statusList = ["completed", "pending"]
-    * def timeList = ["2026-04-06T01:26:11.000+05:30", "2026-04-06T02:26:11.000+05:30"]
-
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * def statusChecker = read('classpath:utils/check-array-value.js')
     * url baseUrl
     * def Token = getBearerToken()

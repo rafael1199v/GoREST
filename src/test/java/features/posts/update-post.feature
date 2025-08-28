@@ -4,7 +4,6 @@ Feature: Actualizar un posts
   Background:
     * def data = callonce read("classpath:helpers/create-post.feature")
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataUserGenerator = read('classpath:utils/random-user-data-generator.js')
     * def randomDataTextGenerator = read('classpath:utils/random-text-generator.js')
     * url baseUrl
     * def Token = getBearerToken()

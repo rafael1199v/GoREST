@@ -4,7 +4,6 @@ Feature: Eliminar a un usuario
   Background:
     * def data = callonce read("classpath:helpers/create-user.feature")
     * def getBearerToken = read('classpath:utils/authorize.js')
-    * def randomDataGenerator = read('classpath:utils/random-user-data-generator.js')
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token
