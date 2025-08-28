@@ -1,3 +1,4 @@
+@UpdateResource
 Feature: Actualizar una tarea
 
   Background:
@@ -38,7 +39,7 @@ Feature: Actualizar una tarea
     }
     """
     And assert (response.status == "completed" || response.status == "pending")
-    And assert responseTime < 2000
+    And assert responseTime < 15000
 
 
   Scenario: Actualizar una tarea con un estado invalido

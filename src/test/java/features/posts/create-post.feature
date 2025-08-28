@@ -1,3 +1,4 @@
+@PostResource
 Feature: Crear un post
 
   Background:
@@ -43,6 +44,7 @@ Feature: Crear un post
     }
     """
 
+  @NotFound
   Scenario: Crear post con usuario inexistente
     * def userId = data.response.id
 

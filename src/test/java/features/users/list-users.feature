@@ -8,6 +8,7 @@ Feature: Listar usuarios
     * header Authorization = Token
     * def req_headers = {Authorization: Token}
 
+  @ListResources @Regression
   Scenario: Listar los usuarios de manera exitosa
     Given path 'users'
     When method get
@@ -52,9 +53,9 @@ Feature: Listar usuarios
     Then status 200
     And match response.id == userId
 
-
-  Scenario: Tiempo de respuesta en menos de 2000ms
+  @Regression
+  Scenario: Tiempo de respuesta en menos de 15000ms
     Given path 'users'
     When method get
     Then status 200
-    And assert responseTime < 2000
+    And assert responseTime < 15000

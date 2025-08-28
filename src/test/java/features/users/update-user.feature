@@ -1,3 +1,4 @@
+@UpdateResource
 Feature: Actualizar un usuario
 
   Background:
@@ -37,6 +38,7 @@ Feature: Actualizar un usuario
     }
     """
 
+  @NotFound
   Scenario:  Actualizar un usuario inexistente
     * def email = randomDataGenerator().generateRandomEmail()
     * def name = randomDataGenerator().generateRandomName()

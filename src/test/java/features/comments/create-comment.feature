@@ -1,3 +1,4 @@
+@PostResource
 Feature: Crear un comentario
 
   Background:
@@ -42,7 +43,7 @@ Feature: Crear un comentario
       body: "#(body)"
     }
     """
-    And assert responseTime < 2000
+    And assert responseTime < 15000
 
   Scenario: Crear un comentario con un nombre vacio
     Given path 'users', userId

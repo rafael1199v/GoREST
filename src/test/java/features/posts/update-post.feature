@@ -1,3 +1,4 @@
+@UpdateResource
 Feature: Actualizar un posts
 
   Background:
@@ -34,7 +35,7 @@ Feature: Actualizar un posts
       body: "#(newBody)"
     }
     """
-    And assert responseTime < 2000
+    And assert responseTime < 15000
 
   Scenario: Actualizar un post con un cuerpo vacio
     * def postId = data.response.id

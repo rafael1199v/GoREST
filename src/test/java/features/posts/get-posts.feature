@@ -10,6 +10,7 @@ Feature: Obtener lista de posts
     * header Authorization = Token
     * def req_headers = {Authorization: Token}
 
+  @ListResources @Regression
   Scenario: Obtener lista exitosamente
     Given path 'posts'
     When method get

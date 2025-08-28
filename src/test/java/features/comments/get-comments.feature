@@ -8,7 +8,7 @@ Feature: Listar comentarios
     * def Token = getBearerToken()
     * header Authorization = Token
 
-
+  @ListResources @Regression
   Scenario: Listar comentarios de manera exitosa
     Given path 'comments'
     When method get
@@ -19,7 +19,6 @@ Feature: Listar comentarios
     * def schema = {id: "#number", post_id: "#number", name: "#string", email: "#string", body: "#string"}
 
     And match each children == schema
-
 
   Scenario: Listar un unico comentario correctamente
     * def commentId = data.response.id

@@ -1,3 +1,4 @@
+@PostResource
 Feature: Crear una tarea
 
   Background:
@@ -18,10 +19,6 @@ Feature: Crear una tarea
     * def todoStatus = randomDataTextGenerator().chooseRandomItem(statusList)
     * def todoDueOn = randomDataTextGenerator().chooseRandomItem(timeList)
 
-    * print todoTitle
-    * print todoStatus
-    * print todoDueOn
-
     Given path 'users', user.id, 'todos'
     And request
     """
@@ -41,6 +38,27 @@ Feature: Crear una tarea
       title: "#(todoTitle)",
       due_on: "#(todoDueOn)",
       status: "#(todoStatus)"
+    }
+    """
+  Scenario: Crear una tarea sin el campo "due_on"
+    Given path 'users', user.id, 'todos'
+    And request
+    """
+    {
+      "title": "Title with no due_on",
+      "status": "completed"
+    }
+    """
+    When method post
+    Then status 201
+    And match response ==
+    """
+    {
+      id: "#number",
+      user_id: "#(user.id)",
+      title: "#string",
+      due_on: "#null",
+      status: "#string"
     }
     """
 

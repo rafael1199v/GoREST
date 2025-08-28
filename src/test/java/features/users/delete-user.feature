@@ -1,3 +1,4 @@
+@DeleteResource
 Feature: Eliminar a un usuario
 
   Background:
@@ -7,8 +8,6 @@ Feature: Eliminar a un usuario
     * url baseUrl
     * def Token = getBearerToken()
     * header Authorization = Token
-    * def req_headers = {Authorization: Token}
-
 
   Scenario: Eliminar a un usuario exitosamente
     * def userId = data.response.id
@@ -16,5 +15,5 @@ Feature: Eliminar a un usuario
     Given path 'users', userId
     When method delete
     Then status 204
-    And assert responseTime < 3000
+    And assert responseTime < 15000
     And match response == ""

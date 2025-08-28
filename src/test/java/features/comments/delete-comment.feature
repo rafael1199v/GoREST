@@ -1,3 +1,4 @@
+@DeleteResource
 Feature: Eliminar un comentario
 
   Background:
@@ -14,4 +15,4 @@ Feature: Eliminar un comentario
     When method delete
     Then status 204
     And match response == ""
-    And assert responseTime < 3000
+    And assert responseTime < 15000

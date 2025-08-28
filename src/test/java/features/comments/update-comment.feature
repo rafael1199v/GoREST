@@ -1,3 +1,4 @@
+@UpdateResource
 Feature: Actualizar un comentario
 
   Background:

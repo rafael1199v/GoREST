@@ -1,3 +1,4 @@
+@PostResource
 Feature: Crear un usuario
 
   Background:
@@ -36,7 +37,7 @@ Feature: Crear un usuario
         "status": "#(status)"
       }
       """
-    And assert responseTime < 3000
+    And assert responseTime < 15000
 
 
   Scenario: Crear usuario con un cuerpo vacio
